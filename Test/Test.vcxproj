@@ -30,7 +30,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -140,13 +140,18 @@
     <ClCompile Include="CameraMan\Camerman.cpp" />
     <ClCompile Include="Cube\Cube.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map\Map.cpp" />
     <ClCompile Include="World\World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CameraMan\Camerman.h" />
     <ClInclude Include="Cube\Cube.h" />
+    <ClInclude Include="Map\Map.h" />
     <ClInclude Include="Utility\Utility.h" />
     <ClInclude Include="World\World.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="DATA.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -25,6 +25,12 @@
     <Filter Include="CameraMan">
       <UniqueIdentifier>{974aafbd-1f22-4ee4-ab62-6f3e230923d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="chunk">
+      <UniqueIdentifier>{1181778f-8bf2-4e7c-acdd-38b9ec506e37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map">
+      <UniqueIdentifier>{86b02263-6ce6-468c-a036-dc9ff5a59b1a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -38,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="CameraMan\Camerman.cpp">
       <Filter>CameraMan</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\Map.cpp">
+      <Filter>Map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -53,5 +62,13 @@
     <ClInclude Include="CameraMan\Camerman.h">
       <Filter>CameraMan</Filter>
     </ClInclude>
+    <ClInclude Include="Map\Map.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="DATA.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>
