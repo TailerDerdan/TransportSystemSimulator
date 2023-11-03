@@ -56,10 +56,23 @@ void Map::RenderMap()
 			{
 				return;
 			}
-			allChunks.emplace(std::pair());
+			//allChunks.emplace(std::pair());
 		}
+		stateLoadUpload = false;
 	}
 	else
 	{
+		for (auto iter : allChunks)
+		{
+			std::string chunk;
+			uint16_t amountBytes = 0;
+			for (auto ch : chunk)
+			{
+				amountBytes += ch;
+			}
+			chunk.push_back(uint8_t(amountBytes >> 8));
+			chunk.push_back(uint8_t(amountBytes));
+
+		}
 	}
 }
