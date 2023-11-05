@@ -21,7 +21,8 @@ int main()
     //}
 
     Map map;
-	map.RenderMap();
+	map.RenderMap(false);
+	map.RenderMap(true);
 
     return 0;
 }

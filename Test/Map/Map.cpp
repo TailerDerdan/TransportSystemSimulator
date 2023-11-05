@@ -1,17 +1,64 @@
 #include "Map.h"
 
-void Map::RenderMap()
+//<spacebar> AABBBBDD... CCCC, where AA - amount of bytes;
+//BBBB - key, which crypts all data;
+//DD... - crypted chunk data;
+//CCCC - control summ that equals ~(AA + BBBB + DD..) + 1, where "~" - bit inversion;
+//all letters - A, B, D, C - BYTES
+void Map::CryptChunk(sf::Vector2i coords, std::string & chunk)
 {
-	std::ifstream file;
-	file.open("DATA.txt", std::ios::binary);
-	if (!file.is_open())
+	std::string coordX = NumToChars(coords.x);
+	std::string coordY = NumToChars(coords.y);
+
+	chunk = coordX + coordY + chunk;
+
+	std::srand(std::time(nullptr));
+	uint32_t key = std::rand();
+
+	uint32_t controlSum = 0;
+	for (uint8_t ch : chunk)
 	{
-		std::cout << "Can't open data file!\n";
-		return;
+		controlSum += ch;
 	}
+	
+	for (size_t i = 0; i < chunk.length(); i++)
+	{
+		chunk[i] ^= key;
+	}
+
+	std::string keyAsChar = NumToChars(key);
+	chunk = keyAsChar + chunk;
+
+	uint16_t amountOfData = chunk.length();
+	for (uint8_t ch : NumToChars(amountOfData))
+	{
+		controlSum += ch;
+	}
+
+	controlSum = ~controlSum + 1;
+	chunk = " " + NumToChars(amountOfData) + chunk + NumToChars(controlSum);
+	std::cout << std::format("Key: {}, AmountOfData: {}, ControlSum: {}\n", key, amountOfData, controlSum);
+}
+
+void Map::DecryptChunk(std::string& chunk)
+{
+
+}
+
+void Map::RenderMap(bool LoadUpload)
+{
+	stateLoadUpload = LoadUpload;
 
 	if (stateLoadUpload)
 	{
+		std::ifstream file;
+		file.open("DATA.txt", std::ios::binary);
+		if (!file.is_open())
+		{
+			std::cout << "Can't open data file!\n";
+			return;
+		}
+
 		while (!file.eof())
 		{
 			unsigned char ch;
@@ -26,15 +73,9 @@ void Map::RenderMap()
 
 				uint16_t amountBytes = 0; 
 				file.read((char*)&amountBytes, sizeof(uint16_t));
-				amountBytes = (amountBytes >> 8) | (amountBytes << 8);
-
-				sumBytes += amountBytes;
 
 				uint32_t cryptKey = 0;
 				file.read((char*)&cryptKey, sizeof(uint32_t));
-				cryptKey = (cryptKey >> 24) | (cryptKey << 24) | (cryptKey >> 16 << 24 >> 16) | (cryptKey << 16 >> 24 << 16);
-				
-				sumBytes += cryptKey;
 				
 				for (uint16_t data = 0; data < amountBytes; data++)
 				{
@@ -43,9 +84,19 @@ void Map::RenderMap()
 					chunk.push_back(ch);
 					sumBytes += uint8_t(ch);
 				}
+
+				std::string x = chunk.substr(0, 4);
+				std::string y = chunk.substr(4, 4);
+				
+
 				uint32_t controlSum = 0;
-				file.read((char*)&controlSum, sizeof(uint32_t));
-				controlSum = (controlSum >> 24) | (controlSum << 24) | (controlSum >> 16 << 24 >> 16) | (controlSum << 16 >> 24 << 16);				
+				std::string cs = chunk.substr(chunk.length() - 4, 4);
+
+				for (size_t i = 0; i < cs.length(); i++)
+				{
+					controlSum += cs[cs.length() - i];
+					controlSum = controlSum << 8;
+				}
 
 				if (controlSum != ~(sumBytes)+1)
 				{
@@ -62,17 +113,19 @@ void Map::RenderMap()
 	}
 	else
 	{
+		allChunks.emplace(sf::Vector2i{ 1651, 193212 }, "abaabbabababababababaaabab");
+		allChunks.emplace(sf::Vector2i{ -1231, -666 }, "sa121212sajjsajasjasasjhass");
+
+		std::ofstream file;
+		file.open("DATA.txt", std::ios::trunc);
+
 		for (auto iter : allChunks)
 		{
-			std::string chunk;
-			uint16_t amountBytes = 0;
-			for (auto ch : chunk)
-			{
-				amountBytes += ch;
-			}
-			chunk.push_back(uint8_t(amountBytes >> 8));
-			chunk.push_back(uint8_t(amountBytes));
-
+			std::string chunk = iter.second;
+			sf::Vector2i coords = iter.first.v;
+			CryptChunk(coords, chunk);
+			file << chunk;
 		}
+		allChunks.clear();
 	}
 }
