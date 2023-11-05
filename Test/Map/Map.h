@@ -6,11 +6,15 @@
 #include <string>
 #include <unordered_map>
 #include <format>
+#include <cstdlib>
+#include <ctime>
+#include <type_traits>
 
 class Map
 {
 public:
-	void RenderMap();
+	void RenderMap(bool LoadUpload);
+
 private:
 	struct WrapVector2i
 	{
@@ -32,4 +36,21 @@ private:
 	std::unordered_map<WrapVector2i, std::string, WrapVector2iHasher> allChunks;
 	bool stateLoadUpload = true;
 	const uint8_t CHUNK_DELIMETR = 32;
+
+	void CryptChunk(sf::Vector2i coords, std::string& chunk);
+	void DecryptChunk(std::string& chunk);
+	
+
+	template <std::integral T>
+	std::string NumToChars(T v)
+	{
+		std::string l;
+		size_t sz = size_t(sizeof(v) / sizeof(char));
+		for (size_t i = 0; i < sz; i++)
+		{
+			l += uint8_t(v);
+			v = v >> 8;
+		}
+		return l;
+	}
 };
