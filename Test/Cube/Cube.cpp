@@ -2,7 +2,7 @@
 
 void Cube::SetCube(sf::Vector2f pos, float size, sf::Color col)
 {
-	if (!m_tileset.loadFromFile("images/trollface.png"))
+	if (!m_tileset.loadFromFile("images/tileset.png"))
 	{
 		return;
 	}

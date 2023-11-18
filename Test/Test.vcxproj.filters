@@ -25,11 +25,11 @@
     <Filter Include="CameraMan">
       <UniqueIdentifier>{974aafbd-1f22-4ee4-ab62-6f3e230923d8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="chunk">
-      <UniqueIdentifier>{1181778f-8bf2-4e7c-acdd-38b9ec506e37}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Map">
-      <UniqueIdentifier>{86b02263-6ce6-468c-a036-dc9ff5a59b1a}</UniqueIdentifier>
+      <UniqueIdentifier>{43e78221-2602-4859-b925-a863ae243904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decoder">
+      <UniqueIdentifier>{7260daa6-1109-4767-8a9f-73ee87ac08af}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -45,7 +45,10 @@
     <ClCompile Include="CameraMan\Camerman.cpp">
       <Filter>CameraMan</Filter>
     </ClCompile>
-    <ClCompile Include="Map\Map.cpp">
+    <ClCompile Include="Decoder\Decoder.cpp">
+      <Filter>Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
       <Filter>Map</Filter>
     </ClCompile>
   </ItemGroup>
@@ -62,8 +65,11 @@
     <ClInclude Include="CameraMan\Camerman.h">
       <Filter>CameraMan</Filter>
     </ClInclude>
-    <ClInclude Include="Map\Map.h">
+    <ClInclude Include="Map.h">
       <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Decoder\Decoder.h">
+      <Filter>Decoder</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

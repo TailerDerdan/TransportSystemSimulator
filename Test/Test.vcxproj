@@ -139,14 +139,16 @@
   <ItemGroup>
     <ClCompile Include="CameraMan\Camerman.cpp" />
     <ClCompile Include="Cube\Cube.cpp" />
+    <ClCompile Include="Decoder\Decoder.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Map\Map.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="World\World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CameraMan\Camerman.h" />
     <ClInclude Include="Cube\Cube.h" />
-    <ClInclude Include="Map\Map.h" />
+    <ClInclude Include="Decoder\Decoder.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Utility\Utility.h" />
     <ClInclude Include="World\World.h" />
   </ItemGroup>

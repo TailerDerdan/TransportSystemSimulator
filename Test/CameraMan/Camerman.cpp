@@ -85,7 +85,7 @@ void Camerman::EventHandler(sf::Event event)
 
 Camerman::Camerman()
 {
-	m_window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "TEST");
+	m_window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Simulator");
 	CameraInit();
 }
 

@@ -13,7 +13,7 @@ public:
 	
 	struct Info
 	{
-		const static uint32_t Size = 100;
+		const static uint32_t Size = 256;
 	};
 
 private:

@@ -20,4 +20,3 @@ public:
 private:
 	std::array<std::array<Cube*, Info::Size>, Info::Size> m_cubeField;
 };
-
