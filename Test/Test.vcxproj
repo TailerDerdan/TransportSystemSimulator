@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CameraMan\Camerman.h" />
+    <ClInclude Include="Const\Const.h" />
     <ClInclude Include="Cube\Cube.h" />
     <ClInclude Include="Decoder\Decoder.h" />
     <ClInclude Include="Map.h" />

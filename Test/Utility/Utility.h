@@ -1,9 +1,7 @@
 #pragma once
-#include <SFML/System/Vector2.hpp>
+#include "SFML/Graphics.hpp"
 #include <vector>
-
-const uint32_t WINDOW_WIDTH = 1024;
-const uint32_t WINDOW_HEIGHT = 768;
+#include "../Const/Const.h"
 
 static std::vector<float> InvMatrix2x2(std::vector<float> mat)
 {

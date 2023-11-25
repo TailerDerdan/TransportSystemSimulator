@@ -2,25 +2,43 @@
 #include <unordered_map>
 #include <SFML/Graphics.hpp>
 #include "Utility/Utility.h"
+#include "Const/Const.h"
+#include "CameraMan/Camerman.h"
+
+using Chunks = std::unordered_map<WrapVector2i, std::string, WrapVector2iHasher>;
 
 class Map
 {
 public:
-	Map();
+	Map(Camerman* m_ptrCamerman, Chunks chunks);
 	~Map();
 	void Update();
 
 	enum class TileAssociation
 	{
-		Grass = 'A'
+		Grass = 'A',
+		Trollface = 'T',
 	};
+
+	void Draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
+	int GetSizeAllChunks()
+	{
+		return allChunks.size();
+	}
 
 private:
 
-	std::unordered_map<WrapVector2i, std::string> allChunks;
-	sf::Vector2i centralCoords;
-	sf::Vector2i centralLastCoords;
+	void TransfromStrToChunk(std::unordered_map<WrapVector2i, std::string>::iterator chunk);
+
+	Chunks allChunks;
+	sf::Vector2i centralLastCoords = {-1, -1};
 	std::vector<sf::VertexBuffer> visibleChunks;
-	sf::RenderWindow* m_ptrWindow;
+	Camerman* m_ptrCamerman = nullptr;
 	const uint8_t RADIUS_RENDER = 2;
+	sf::Vector2i centralCoordsNew;
+
+	std::string emptyChunk;
+
+	sf::Texture m_texture;
 };

@@ -31,6 +31,9 @@
     <Filter Include="Decoder">
       <UniqueIdentifier>{7260daa6-1109-4767-8a9f-73ee87ac08af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Const">
+      <UniqueIdentifier>{86d1dd10-46b3-43df-9726-bb38d9b7312d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -70,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="Decoder\Decoder.h">
       <Filter>Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Const\Const.h">
+      <Filter>Const</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
