@@ -5,7 +5,6 @@
 
 int main()
 {
-
 	Camerman mainCam;
 	Chunks ch;
 	Map mappa(&mainCam, ch);

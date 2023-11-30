@@ -4,6 +4,7 @@
 #include "Utility/Utility.h"
 #include "Const/Const.h"
 #include "CameraMan/Camerman.h"
+#include <format>
 
 using Chunks = std::unordered_map<WrapVector2i, std::string, WrapVector2iHasher>;
 
@@ -29,7 +30,7 @@ public:
 
 private:
 
-	void TransfromStrToChunk(std::unordered_map<WrapVector2i, std::string>::iterator chunk);
+	void TransfromStrToChunk(std::unordered_map<WrapVector2i, std::string>::iterator chunk, size_t indexOfBuffer);
 
 	Chunks allChunks;
 	sf::Vector2i centralLastCoords = {-1, -1};
