@@ -1,7 +1,6 @@
 #pragma once
 #include "../Utility/Utility.h"
 #include "SFML/Graphics.hpp"
-#include "../Cube/Cube.h"
 #include "../Const/Const.h"
 
 class Camerman
