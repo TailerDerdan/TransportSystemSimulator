@@ -36,7 +36,7 @@ private:
 	sf::Vector2i centralLastCoords = {-1, -1};
 	std::vector<sf::VertexBuffer> visibleChunks;
 	Camerman* m_ptrCamerman = nullptr;
-	const uint8_t RADIUS_RENDER = 2;
+	const uint8_t RADIUS_RENDER = 4;
 	sf::Vector2i centralCoordsNew;
 
 	std::string emptyChunk;

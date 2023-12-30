@@ -31,7 +31,7 @@ sf::Vector2i Camerman::GetCenterCoordOfChunk()
 
 void Camerman::CameraInit()
 {
-	m_view.reset(sf::FloatRect({ -325.0f, -200.0f }, { WINDOW_WIDTH, WINDOW_HEIGHT }));
+	m_view.reset(sf::FloatRect({ -325.0f, -200.0f }, { float(WINDOW_WIDTH), float(WINDOW_HEIGHT) }));
 	m_window.setView(m_view);
 }
 
@@ -40,8 +40,11 @@ void Camerman::EventHandler(sf::Event event)
 	sf::Vector2i coordBefore;
 	switch (event.type)
 	{
-	case sf::Event::Closed:
-		m_window.close();
+	case sf::Event::KeyPressed:
+		if (event.key.code == sf::Keyboard::Escape)
+		{
+			m_window.close();
+		}
 		break;
 
 	case sf::Event::MouseWheelMoved:
@@ -95,7 +98,7 @@ void Camerman::EventHandler(sf::Event event)
 
 Camerman::Camerman()
 {
-	m_window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Simulator");
+	m_window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Simulator", sf::Style::Titlebar);
 	CameraInit();
 }
 

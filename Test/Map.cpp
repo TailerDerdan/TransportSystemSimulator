@@ -14,10 +14,10 @@ void Map::TransfromStrToChunk(std::unordered_map<WrapVector2i, std::string>::ite
 	{
 		sf::Vector2f pos = { float(i % SIZE_CHUNK), float(i / SIZE_CHUNK) };
 		sf::Vertex v[4] = {
-			{ CartesianToIsometric(sf::Vector2f{ 0.0f, 0.0f } + chunkPos + pos, SIZE_TILE_IN_PIXEL), sf::Color::Green },
-			{ CartesianToIsometric(sf::Vector2f{ 1.0f, 0.0f } + chunkPos + pos, SIZE_TILE_IN_PIXEL), sf::Color::Green },
-			{ CartesianToIsometric(sf::Vector2f{ 1.0f, 1.0f } + chunkPos + pos, SIZE_TILE_IN_PIXEL), sf::Color::Green },
-			{ CartesianToIsometric(sf::Vector2f{ 0.0f, 1.0f } + chunkPos + pos, SIZE_TILE_IN_PIXEL), sf::Color::Green },
+			{ CartesianToIsometric(sf::Vector2f{ 0.0f, 0.0f } + chunkPos + pos, SIZE_TILE_IN_PIXEL)},
+			{ CartesianToIsometric(sf::Vector2f{ 1.0f, 0.0f } + chunkPos + pos, SIZE_TILE_IN_PIXEL)},
+			{ CartesianToIsometric(sf::Vector2f{ 1.0f, 1.0f } + chunkPos + pos, SIZE_TILE_IN_PIXEL)},
+			{ CartesianToIsometric(sf::Vector2f{ 0.0f, 1.0f } + chunkPos + pos, SIZE_TILE_IN_PIXEL)},
 		};
 		float r = 0.0;
 
