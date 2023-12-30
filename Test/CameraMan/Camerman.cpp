@@ -41,7 +41,7 @@ void Camerman::EventHandler(sf::Event event)
 	switch (event.type)
 	{
 	case sf::Event::KeyPressed:
-		if (event.key.code == sf::Keyboard::Escape)
+		if (event.key.scancode == sf::Keyboard::Scan::Escape)
 		{
 			m_window.close();
 		}
