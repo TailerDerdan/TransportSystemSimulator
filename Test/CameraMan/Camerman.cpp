@@ -28,7 +28,6 @@ sf::Vector2i Camerman::GetCenterCoordOfChunk()
 	return { int(gridCoord.x / SIZE_CHUNK), int(gridCoord.y / SIZE_CHUNK) };
 }
 
-
 void Camerman::CameraInit()
 {
 	m_view.reset(sf::FloatRect({ -325.0f, -200.0f }, { float(WINDOW_WIDTH), float(WINDOW_HEIGHT) }));
