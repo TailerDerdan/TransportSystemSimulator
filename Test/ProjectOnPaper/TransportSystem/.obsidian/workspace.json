@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "cffaae93c9a74c15",
+    "type": "split",
+    "children": [
+      {
+        "id": "c89a6cc2417fd482",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3bd29967b58ad0ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Итоговый проект на 11 класс/One pager.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "284addb57a55ccb1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9251d4c62ac6156c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f70c5febaf68f151",
+    "type": "split",
+    "children": [
+      {
+        "id": "69e22d827632e4de",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1d4581b86b870d5b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7f290b40cb2aeb1b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "74b951ee6ab1d92a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "99255c31f1cea2d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "0ee0e33a787465c2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bbc3bf47ffdd52e7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Итоговый проект на 11 класс/One pager.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2213c2766610742f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Итоговый проект на 11 класс/One pager.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c5b3782f74024954",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "77403476c7269798",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Итоговый проект на 11 класс/One pager.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false
+    }
+  },
+  "active": "9251d4c62ac6156c",
+  "lastOpenFiles": [
+    "Итоговый проект на 11 класс/Введение или о чем проект.md",
+    "Итоговый проект на 11 класс/RoadMap.md",
+    "Итоговый проект на 11 класс/One pager.md",
+    "15 мая.md",
+    "Класс ISign.md",
+    "Введение или о чем проект.md",
+    "2024-01-27.md",
+    "Итоговый проект на 11 класс"
+  ]
+}

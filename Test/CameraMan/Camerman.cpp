@@ -1,6 +1,7 @@
 #include "../CameraMan/Camerman.h"
 #include <iostream>
 #include <string>
+#include "../Const/Const.h"
 
 void Camerman::Update()
 {
@@ -11,18 +12,26 @@ void Camerman::Update()
 	}
 }
 
-void Camerman::CameraInit()
-{
-	m_view.reset(sf::FloatRect({ -325.0f, -200.0f }, { WINDOW_WIDTH, WINDOW_HEIGHT }));
-	m_window.setView(m_view);
-}
-
-sf::Vector2f Camerman::WindowsRealtiveToGrid()
+sf::Vector2f Camerman::WindowsRealtiveToGridFromMouse()
 {
 	sf::Vector2i pixelPos = sf::Mouse::getPosition(m_window);
 	sf::Vector2f worldPos = m_window.mapPixelToCoords(pixelPos, m_view);
-	sf::Vector2f gridCoord = IsometricToCartesian(worldPos, Cube::Info::Size);
+	sf::Vector2f gridCoord = IsometricToCartesian(worldPos, SIZE_TILE_IN_PIXEL);
 	return gridCoord;
+}
+
+sf::Vector2i Camerman::GetCenterCoordOfChunk()
+{
+	sf::Vector2i pixelPos = { WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2 };
+	sf::Vector2f worldPos = m_window.mapPixelToCoords(pixelPos, m_view);
+	sf::Vector2f gridCoord = IsometricToCartesian(worldPos, SIZE_TILE_IN_PIXEL);
+	return { int(gridCoord.x / SIZE_CHUNK), int(gridCoord.y / SIZE_CHUNK) };
+}
+
+void Camerman::CameraInit()
+{
+	m_view.reset(sf::FloatRect({ -325.0f, -200.0f }, { float(WINDOW_WIDTH), float(WINDOW_HEIGHT) }));
+	m_window.setView(m_view);
 }
 
 void Camerman::EventHandler(sf::Event event)
@@ -30,8 +39,11 @@ void Camerman::EventHandler(sf::Event event)
 	sf::Vector2i coordBefore;
 	switch (event.type)
 	{
-	case sf::Event::Closed:
-		m_window.close();
+	case sf::Event::KeyPressed:
+		if (event.key.scancode == sf::Keyboard::Scan::Escape)
+		{
+			m_window.close();
+		}
 		break;
 
 	case sf::Event::MouseWheelMoved:
@@ -54,7 +66,7 @@ void Camerman::EventHandler(sf::Event event)
 	case sf::Event::MouseButtonPressed:
 		if (event.mouseButton.button == sf::Mouse::Left)
 		{
-			sf::Vector2f gridCoord = WindowsRealtiveToGrid();
+			sf::Vector2f gridCoord = WindowsRealtiveToGridFromMouse();
 			m_window.setTitle("X: " + std::to_string(gridCoord.x) + "; Y: " + std::to_string(gridCoord.y));
 			
 		}
@@ -85,7 +97,7 @@ void Camerman::EventHandler(sf::Event event)
 
 Camerman::Camerman()
 {
-	m_window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "TEST");
+	m_window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Simulator", sf::Style::Titlebar);
 	CameraInit();
 }
 

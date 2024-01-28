@@ -1,11 +1,11 @@
-#include "Map.h"
+#include "Decoder.h"
 
 //<spacebar> AABBBBDD... CCCC, where AA - amount of bytes;
 //BBBB - key, which crypts all data;
 //DD... - crypted chunk data;
 //CCCC - control summ that equals ~(AA + BBBB + DD..) + 1, where "~" - bit inversion;
 //all letters - A, B, D, C - BYTES
-void Map::CryptChunk(sf::Vector2i coords, std::string & chunk)
+void Decoder::CryptChunk(sf::Vector2i coords, std::string& chunk)
 {
 	std::string coordX = NumToChars(coords.x);
 	std::string coordY = NumToChars(coords.y);
@@ -44,7 +44,7 @@ void Map::CryptChunk(sf::Vector2i coords, std::string & chunk)
 	chunk = START_CHARACTER + NumToChars(amountOfData) + chunk + NumToChars(controlSum);
 }
 
-void Map::DecryptChunk(std::ifstream& file)
+void Decoder::DecryptChunk(std::ifstream& file)
 {
 	while (!file.eof())
 	{
@@ -109,7 +109,7 @@ void Map::DecryptChunk(std::ifstream& file)
 	}
 }
 
-void Map::RenderMap(bool LoadUpload)
+void Decoder::RenderMap(bool LoadUpload)
 {
 	stateLoadUpload = LoadUpload;
 

@@ -9,29 +9,14 @@
 #include <cstdlib>
 #include <ctime>
 #include <type_traits>
+#include "../Utility/Utility.h"
 
-class Map
+class Decoder
 {
 public:
 	void RenderMap(bool LoadUpload);
 
 private:
-	struct WrapVector2i
-	{
-		sf::Vector2i v;
-		bool operator==(const WrapVector2i& pt2) const
-		{
-			return this->v.x == pt2.v.x && this->v.y == pt2.v.y;
-		}
-	};
-
-	struct WrapVector2iHasher
-	{
-		bool operator()(const WrapVector2i& vec) const
-		{
-			return std::hash<int>()(vec.v.x) ^ std::hash<int>()(vec.v.y);
-		}
-	};
 
 	std::unordered_map<WrapVector2i, std::string, WrapVector2iHasher> allChunks;
 	bool stateLoadUpload = true;

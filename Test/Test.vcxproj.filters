@@ -13,57 +13,51 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="World">
-      <UniqueIdentifier>{5b2b11cb-0359-4558-bdcf-375999a968eb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Utility">
       <UniqueIdentifier>{2220e834-ccbe-47aa-b51a-1a83646a0086}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Cube">
-      <UniqueIdentifier>{0f8de52e-0941-4241-9b0b-ff6d6f10c5c9}</UniqueIdentifier>
     </Filter>
     <Filter Include="CameraMan">
       <UniqueIdentifier>{974aafbd-1f22-4ee4-ab62-6f3e230923d8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="chunk">
-      <UniqueIdentifier>{1181778f-8bf2-4e7c-acdd-38b9ec506e37}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Map">
-      <UniqueIdentifier>{86b02263-6ce6-468c-a036-dc9ff5a59b1a}</UniqueIdentifier>
+      <UniqueIdentifier>{43e78221-2602-4859-b925-a863ae243904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decoder">
+      <UniqueIdentifier>{7260daa6-1109-4767-8a9f-73ee87ac08af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Const">
+      <UniqueIdentifier>{86d1dd10-46b3-43df-9726-bb38d9b7312d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="World\World.cpp">
-      <Filter>World</Filter>
-    </ClCompile>
-    <ClCompile Include="Cube\Cube.cpp">
-      <Filter>Cube</Filter>
-    </ClCompile>
     <ClCompile Include="CameraMan\Camerman.cpp">
       <Filter>CameraMan</Filter>
     </ClCompile>
-    <ClCompile Include="Map\Map.cpp">
+    <ClCompile Include="Decoder\Decoder.cpp">
+      <Filter>Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
       <Filter>Map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="World\World.h">
-      <Filter>World</Filter>
-    </ClInclude>
     <ClInclude Include="Utility\Utility.h">
       <Filter>Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="Cube\Cube.h">
-      <Filter>Cube</Filter>
     </ClInclude>
     <ClInclude Include="CameraMan\Camerman.h">
       <Filter>CameraMan</Filter>
     </ClInclude>
-    <ClInclude Include="Map\Map.h">
+    <ClInclude Include="Map.h">
       <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Decoder\Decoder.h">
+      <Filter>Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Const\Const.h">
+      <Filter>Const</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

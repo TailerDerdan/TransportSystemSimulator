@@ -1,9 +1,7 @@
 #pragma once
-#include <SFML/System/Vector2.hpp>
+#include "SFML/Graphics.hpp"
 #include <vector>
-
-const uint32_t WINDOW_WIDTH = 1024;
-const uint32_t WINDOW_HEIGHT = 768;
+#include "../Const/Const.h"
 
 static std::vector<float> InvMatrix2x2(std::vector<float> mat)
 {
@@ -45,3 +43,20 @@ static sf::Vector2f IsometricToCartesian(sf::Vector2f vec, float size)
 		vec.x * mat[2] + vec.y * mat[3]
 	};
 }
+
+struct WrapVector2i
+{
+	sf::Vector2i v;
+	bool operator==(const WrapVector2i& pt2) const
+	{
+		return this->v.x == pt2.v.x && this->v.y == pt2.v.y;
+	}
+};
+
+struct WrapVector2iHasher
+{
+	bool operator()(const WrapVector2i& vec) const
+	{
+		return std::hash<int>()(vec.v.x) ^ std::hash<int>()(vec.v.y);
+	}
+};
