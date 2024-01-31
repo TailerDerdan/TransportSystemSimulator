@@ -13,24 +13,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Итоговый проект на 11 класс/One pager.md",
+                "file": "2024-01-29.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "284addb57a55ccb1",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "9251d4c62ac6156c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
         ]
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Итоговый проект на 11 класс/One pager.md",
+                "file": "2024-01-29.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Итоговый проект на 11 класс/One pager.md",
+                "file": "2024-01-29.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Итоговый проект на 11 класс/One pager.md"
+                "file": "2024-01-29.md"
               }
             }
           }
@@ -160,11 +146,12 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "9251d4c62ac6156c",
+  "active": "3bd29967b58ad0ee",
   "lastOpenFiles": [
-    "Итоговый проект на 11 класс/Введение или о чем проект.md",
     "Итоговый проект на 11 класс/RoadMap.md",
+    "2024-01-29.md",
     "Итоговый проект на 11 класс/One pager.md",
+    "Итоговый проект на 11 класс/Введение или о чем проект.md",
     "15 мая.md",
     "Класс ISign.md",
     "Введение или о чем проект.md",
