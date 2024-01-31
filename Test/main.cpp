@@ -1,29 +1,66 @@
-#include "Map.h"
-#include "CameraMan/Camerman.h"
-#include "Utility/Utility.h"
-#include <string>
+#pragma warning(disable : 4996)
+#include <SFML/Graphics.hpp>
+#include <iostream>
 
 int main()
 {
-	Camerman mainCam;
-	Chunks ch;
-	Map mappa(&mainCam, ch);
-
 	sf::Clock clock;
 	float fps = 0.0f;
 
-	while (mainCam.m_window.isOpen())
+
+	const float winW = 800;
+	const float winH = 600;
+
+	sf::RenderWindow window(sf::VideoMode(winW, winH), "SFML Shader Example");
+	window.setMouseCursorVisible(false); // hide the cursor
+
+	// Create a texture and a sprite for the shader
+	sf::Texture tex;
+	tex.create(winW, winH);
+	sf::Sprite spr(tex);
+
+	sf::Shader shader;
+	shader.loadFromFile("fire.glsl", sf::Shader::Fragment); // load the shader
+
+	if (!shader.isAvailable())
+	{
+		std::cout << "The shader is not available\n";
+	}
+
+	// Set the resolution parameter (the resoltion is divided to make the fire smaller)
+	shader.setParameter("resolution", sf::Vector2f(winW / 2, winH / 2));
+
+	// Use a timer to obtain the time elapsed
+	sf::Clock clk;
+	clk.restart(); // start the timer
+
+	while (window.isOpen())
 	{
 		float curTime = clock.restart().asSeconds();
 		fps = 1.0f / curTime;
-		mainCam.Update();
-		mainCam.m_window.clear(sf::Color(255, 255, 255, 255));
-		mappa.Update();
-		mappa.Draw(mainCam.m_window, sf::RenderStates::Default);
-		mainCam.m_window.display();
+		window.setTitle(std::to_string(fps));
 
-		mainCam.m_window.setTitle(std::format("{} fps", fps));
+		// Event handling
+		sf::Event event;
+
+		while (window.pollEvent(event))
+		{
+			// Exit the app when a key is pressed
+			if (event.type == sf::Event::KeyPressed)
+				window.close();
+		}
+
+		// Set the others parameters who need to be updated every frames
+		shader.setParameter("time", clk.getElapsedTime().asSeconds());
+
+		sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+		shader.setParameter("mouse", sf::Vector2f(mousePos.x, mousePos.y - winH / 2));
+
+		// Draw the sprite with the shader on it
+		window.clear();
+		window.draw(spr, &shader);
+		window.display();
 	}
 
-    return 0;
+	return 0;
 }

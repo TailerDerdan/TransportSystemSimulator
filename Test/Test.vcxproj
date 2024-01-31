@@ -152,6 +152,11 @@
   <ItemGroup>
     <Text Include="DATA.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="fire.glsl" />
+    <None Include="heat_shader.fs" />
+    <None Include="heat_shader.vs" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

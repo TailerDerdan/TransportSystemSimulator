@@ -28,6 +28,9 @@
     <Filter Include="Const">
       <UniqueIdentifier>{86d1dd10-46b3-43df-9726-bb38d9b7312d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{a9c4e3ec-1d74-4e31-a8d0-8ff08e7152f3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -64,5 +67,16 @@
     <Text Include="DATA.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="heat_shader.vs">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="heat_shader.fs">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="fire.glsl">
+      <Filter>Shader</Filter>
+    </None>
   </ItemGroup>
 </Project>

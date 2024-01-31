@@ -1,0 +1,163 @@
+{
+  "main": {
+    "id": "c6c313efff5394ed",
+    "type": "split",
+    "children": [
+      {
+        "id": "b6e4c81f24d2471d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f278f3a7336da3da",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TransportSystem/Итоговый проект на 11 класс/Оптимизация существующего кода/Язык шейдеров - GLSL.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c4d9ae74ef7747a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "26988058a2492bef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "56efba96e64a3530",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b8f4ab8909827272",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c7aa83052a2a2e2a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a8c83bde366a11f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "968897da37304b2e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fe8a723d01c9cc2e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "TransportSystem/Итоговый проект на 11 класс/Оптимизация существующего кода/Язык шейдеров - GLSL.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "448a102dc2445931",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "TransportSystem/Итоговый проект на 11 класс/Оптимизация существующего кода/Язык шейдеров - GLSL.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1dc38dffe94a1c10",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f235d79c545443f0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TransportSystem/Итоговый проект на 11 класс/Оптимизация существующего кода/Язык шейдеров - GLSL.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false
+    }
+  },
+  "active": "f278f3a7336da3da",
+  "lastOpenFiles": [
+    "TransportSystem/Итоговый проект на 11 класс/Оптимизация существующего кода/Шейдеры.md",
+    "TransportSystem/Итоговый проект на 11 класс/Оптимизация существующего кода/Язык шейдеров - GLSL.md",
+    "Класс Decoder.md",
+    "TransportSystem/Итоговый проект на 11 класс/Оптимизация существующего кода/Оптимизация существующего кода.md",
+    "TransportSystem/Итоговый проект на 11 класс/Оптимизация существующего кода/Chunk.png",
+    "TransportSystem/Итоговый проект на 11 класс/Оптимизация существующего кода",
+    "TransportSystem/Класс ISign.md",
+    "TransportSystem/Итоговый проект на 11 класс/Введение или о чем проект.md",
+    "TransportSystem/Реализация отображения клеток травы.md",
+    "TransportSystem/Итоговый проект на 11 класс/RoadMap.md",
+    "TransportSystem/Итоговый проект на 11 класс/One pager.md"
+  ]
+}
